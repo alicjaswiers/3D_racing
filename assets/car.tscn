@@ -1,0 +1,232 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://assets/Cadnav.com_B090242038.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://camera_pivot.gd" type="Script" id=2]
+[ext_resource path="res://assets/car.gd" type="Script" id=3]
+[ext_resource path="res://assets/smoke.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SpatialMaterial" id=49]
+albedo_color = Color( 0.0588235, 0.0392157, 0.396078, 1 )
+metallic = 0.94
+metallic_texture_channel = 2
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.0392157, 0.0431373, 0.415686, 1 )
+metallic = 0.33
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.780392, 0.74902, 0.74902, 1 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.835294, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0, 0, 0, 0.580392 )
+
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 0.192157, 0.196078, 0.203922, 1 )
+
+[sub_resource type="SpatialMaterial" id=19]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=20]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=21]
+
+[sub_resource type="SpatialMaterial" id=22]
+
+[sub_resource type="SpatialMaterial" id=23]
+albedo_color = Color( 0.00392157, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=24]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=25]
+albedo_color = Color( 0.466667, 0.466667, 0.466667, 1 )
+
+[sub_resource type="SpatialMaterial" id=29]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=30]
+
+[sub_resource type="SpatialMaterial" id=31]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=35]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=40]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=41]
+
+[sub_resource type="SpatialMaterial" id=48]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( -0.7225, -0.25, -1.43083, 0.694167, 0.25, 1.37472, -0.694167, 0.25, 1.37472, 0.7225, -0.25, 1.43083, 0.694167, 0.25, -1.37472, -0.7225, -0.25, 1.43083, 0.7225, -0.25, -1.43083, -0.694167, 0.25, -1.37472 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CylinderMesh" id=7]
+material = SubResource( 6 )
+top_radius = 0.4
+bottom_radius = 0.4
+height = 0.25
+radial_segments = 12
+
+[node name="car" type="VehicleBody"]
+transform = Transform( -0.9956, 0, 0.0937085, 0, 1, 0, -0.0937085, 0, -0.9956, 19.3976, 118.957, 8.02229 )
+script = ExtResource( 3 )
+
+[node name="car_body" type="MeshInstance" parent="."]
+transform = Transform( 0.0299996, 4.25568e-06, -0.000154969, 0.000154969, -0.00164646, 0.0299544, -4.25568e-06, -0.0299548, -0.00164646, 0, -0.562187, 0 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 49 )
+material/1 = SubResource( 9 )
+material/2 = SubResource( 10 )
+material/3 = SubResource( 11 )
+material/4 = SubResource( 9 )
+material/5 = SubResource( 13 )
+material/6 = SubResource( 14 )
+material/7 = SubResource( 9 )
+material/8 = SubResource( 9 )
+material/9 = SubResource( 9 )
+material/10 = SubResource( 9 )
+material/11 = SubResource( 19 )
+material/12 = SubResource( 20 )
+material/13 = SubResource( 21 )
+material/14 = SubResource( 22 )
+material/15 = SubResource( 23 )
+material/16 = SubResource( 24 )
+material/17 = SubResource( 25 )
+material/18 = SubResource( 9 )
+material/19 = SubResource( 9 )
+material/20 = SubResource( 9 )
+material/21 = SubResource( 29 )
+material/22 = SubResource( 30 )
+material/23 = SubResource( 31 )
+material/24 = SubResource( 9 )
+material/25 = SubResource( 9 )
+material/26 = SubResource( 9 )
+material/27 = SubResource( 35 )
+material/28 = SubResource( 9 )
+material/29 = SubResource( 40 )
+material/30 = SubResource( 9 )
+material/31 = SubResource( 9 )
+material/32 = SubResource( 41 )
+material/33 = SubResource( 9 )
+material/34 = SubResource( 9 )
+material/35 = SubResource( 9 )
+material/36 = SubResource( 9 )
+material/37 = SubResource( 9 )
+material/38 = SubResource( 9 )
+material/39 = SubResource( 48 )
+material/40 = SubResource( 9 )
+material/41 = SubResource( 9 )
+material/42 = SubResource( 9 )
+material/43 = SubResource( 9 )
+material/44 = SubResource( 9 )
+material/45 = SubResource( 9 )
+material/46 = SubResource( 9 )
+material/47 = SubResource( 9 )
+material/48 = SubResource( 9 )
+material/49 = SubResource( 9 )
+material/50 = SubResource( 9 )
+material/51 = SubResource( 9 )
+material/52 = SubResource( 9 )
+material/53 = SubResource( 9 )
+material/54 = SubResource( 9 )
+material/55 = SubResource( 9 )
+material/56 = SubResource( 9 )
+material/57 = SubResource( 9 )
+material/58 = SubResource( 9 )
+material/59 = SubResource( 9 )
+material/60 = SubResource( 9 )
+material/61 = SubResource( 9 )
+material/62 = SubResource( 9 )
+material/63 = SubResource( 9 )
+material/64 = SubResource( 9 )
+material/65 = SubResource( 9 )
+material/66 = SubResource( 9 )
+material/67 = SubResource( 9 )
+material/68 = SubResource( 9 )
+material/69 = SubResource( 9 )
+material/70 = SubResource( 9 )
+material/71 = SubResource( 9 )
+material/72 = SubResource( 9 )
+material/73 = SubResource( 9 )
+material/74 = SubResource( 9 )
+material/75 = SubResource( 9 )
+material/76 = SubResource( 49 )
+material/77 = SubResource( 49 )
+material/78 = SubResource( 49 )
+material/79 = SubResource( 49 )
+material/80 = SubResource( 49 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.143, 0, 0, 0, 1.983, 0, 0, 0, 1.393, 0, 0.255, 0 )
+shape = SubResource( 5 )
+
+[node name="front_left_wheel" type="VehicleWheel" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.881831, -0.124729, 1.27406 )
+use_as_steering = true
+wheel_radius = 0.4
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="MeshInstance" type="MeshInstance" parent="front_left_wheel"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 7 )
+
+[node name="front_right_wheel" type="VehicleWheel" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858989, -0.124729, 1.27406 )
+use_as_steering = true
+wheel_radius = 0.4
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="MeshInstance" type="MeshInstance" parent="front_right_wheel"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 7 )
+
+[node name="back_left_wheel" type="VehicleWheel" parent="."]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.881834, -0.24926, -1.46826 )
+use_as_traction = true
+wheel_radius = 0.4
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="MeshInstance" type="MeshInstance" parent="back_left_wheel"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 7 )
+
+[node name="back_right_wheel" type="VehicleWheel" parent="."]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -0.859087, -0.24926, -1.46826 )
+use_as_traction = true
+wheel_radius = 0.4
+suspension_stiffness = 50.0
+damping_compression = 1.9
+damping_relaxation = 2.0
+
+[node name="MeshInstance" type="MeshInstance" parent="back_right_wheel"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 7 )
+
+[node name="camera_pivot" type="Spatial" parent="."]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="camera_pivot"]
+transform = Transform( -0.999847, 6.98385e-10, -0.0175047, -0.00603945, 0.938595, 0.344967, 0.0164298, 0.34502, -0.938452, 0, 3.52056, -5.03512 )
+
+[node name="Smoke" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 7.45058e-08, 0, 1, 0, -7.45058e-08, 0, 1, 0.547659, -0.375854, -1.71888 )
+emitting = false
+
+[node name="Smoke2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, -0.983683, -0.375854, -1.57474 )
