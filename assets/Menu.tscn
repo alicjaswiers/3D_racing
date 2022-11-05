@@ -1,10 +1,62 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/stylbox.tres" type="StyleBox" id=1]
+[ext_resource path="res://assets/Menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/citroen.jpg" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="Theme" id=2]
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_focus = Color( 0.0352941, 0.00392157, 0.254902, 1 )
+Button/styles/disabled = ExtResource( 1 )
+Button/styles/focus = ExtResource( 1 )
+Button/styles/hover = ExtResource( 1 )
+Button/styles/normal = ExtResource( 1 )
+Button/styles/pressed = ExtResource( 1 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 
-[node name="PLAY" type="Button" parent="."]
-margin_right = 12.0
-margin_bottom = 20.0
-text = "PLAY"
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+material = SubResource( 1 )
+anchor_top = 1.0
+anchor_right = 0.055
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -114.0
+margin_right = 120.68
+margin_bottom = -21.0
+rect_scale = Vector2( 1, 1.04 )
+theme = SubResource( 2 )
+alignment = 1
+
+[node name="Play" type="Button" parent="MenuContainer"]
+margin_top = 18.0
+margin_right = 157.0
+margin_bottom = 34.0
+text = "Play"
+
+[node name="Options" type="Button" parent="MenuContainer"]
+margin_top = 38.0
+margin_right = 157.0
+margin_bottom = 54.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="MenuContainer"]
+margin_top = 58.0
+margin_right = 157.0
+margin_bottom = 74.0
+text = "Quit"
+
+[node name="Citroen" type="Sprite" parent="."]
+position = Vector2( 514.875, 298.5 )
+scale = Vector2( 1.60977, 1.24375 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[connection signal="pressed" from="MenuContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="MenuContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="MenuContainer/Quit" to="." method="_on_Quit_pressed"]

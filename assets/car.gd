@@ -11,7 +11,7 @@ func _physics_process(delta):
 	var rpm = $back_left_wheel.get_rpm()
 	$back_left_wheel.engine_force = acceleration * max_torque * ( 1 - rpm / max_rpm)
 	rpm = $back_right_wheel.get_rpm()
-	$back_right_wheel.engine_force = acceleration * max_torque * ( 1 - rpm / max_rpm)	
+	$back_right_wheel.engine_force = acceleration * max_torque * ( 1 - rpm / max_rpm)
 	#if gripR < 0.3:
 	#	$smoke.emitting = true
 	#	$smoke2.emitting = true
