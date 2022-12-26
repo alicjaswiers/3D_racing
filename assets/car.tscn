@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/Cadnav.com_B090242038.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://camera_pivot.gd" type="Script" id=2]
 [ext_resource path="res://assets/car.gd" type="Script" id=3]
 [ext_resource path="res://assets/smoke.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/EngineSound.ogg" type="AudioStream" id=5]
 
 [sub_resource type="SpatialMaterial" id=49]
 albedo_color = Color( 0.0588235, 0.0392157, 0.396078, 1 )
@@ -232,3 +233,7 @@ emitting = false
 [node name="Smoke2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, -0.983683, -0.375854, -1.57474 )
 visible = false
+
+[node name="EngineSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true

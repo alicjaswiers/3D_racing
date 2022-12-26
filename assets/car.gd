@@ -12,9 +12,11 @@ func _physics_process(delta):
 	$back_left_wheel.engine_force = acceleration * max_torque * ( 1 - rpm / max_rpm)
 	rpm = $back_right_wheel.get_rpm()
 	$back_right_wheel.engine_force = acceleration * max_torque * ( 1 - rpm / max_rpm)
+	$EngineSFX.pitch_scale = lerp($EngineSFX.pitch_scale, 2, 2 * delta)
 	#if gripR < 0.3:
 	#	$smoke.emitting = true
 	#	$smoke2.emitting = true
 	#else:
 	#	$smoke.emitting = false
 	#	$smoke2.emitting = false
+	
